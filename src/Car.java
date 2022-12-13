@@ -30,7 +30,6 @@ public class Car {
         if (productionCountry == null || productionCountry.isEmpty()) {
             productionCountry = "default";}
             this.productionCountry = productionCountry;
-
     }
         @Override
         public String toString () {
