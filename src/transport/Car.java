@@ -26,12 +26,21 @@ public class Car {
         boolean summerTyers,
         Key key) {
 
+        if (color == null || color.isEmpty()) {
+            color = "Белый";
+        }
+this.color = color;
+
+        if (engineVolume <= 0 ) {
+            engineVolume = 1.5;
+        }
+this.engineVolume = engineVolume;
             if (brand == null || brand.isEmpty()) {
                 brand = "default";
             }
             this.brand = brand;
 
-        if (model == null || model.isEmpty()) {
+        if (model == null || model.isEmpty() || model.isBlank()) {
             model = "default";
         }
         this.model = model;
@@ -122,13 +131,7 @@ public class Car {
         return regNumber;
     }
 
-    public void setRegNumber(String regNumber) {
-        if (regNumber == null) {
-            this.regNumber = "x000xx000";
-        } else {
-            this.regNumber = regNumber;
-        }
-    }
+
 
     public boolean isSummerTyers() {
         return summerTyers;
@@ -174,11 +177,19 @@ public class Car {
         this.key = key;
     }
 
+
+    public void setRegNumber(String regNumber) {
+        if (regNumber == null) {
+            this.regNumber = "x000xx000";
+        } else {
+            this.regNumber = regNumber;
+        }
+    }
+
     public boolean isCorrectRegNumber() {
         if (regNumber.length() != 9) {
             return false;
         }
-        /// A713BV062
         char[] chars  = regNumber.toCharArray();
         if (!Character.isAlphabetic(chars[0]) || !Character.isAlphabetic(chars[4]) || !Character.isAlphabetic(chars[5])) {
             return false;
