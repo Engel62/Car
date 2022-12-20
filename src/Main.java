@@ -3,7 +3,7 @@ import transport.Car;
 public class Main {
     public static void main(String[] args) {
         Car lada = new Car("Lada", "Granta", 1.7, "желтый", 2015, "Россия");
-        lada.setRegNumber("У713ЩХ062");
+        lada.setRegNumber("A713BV062");
         System.out.println(lada.isCorrectRegNumber());
         Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "черный", 2020, "Германия");
         Car bmw = new Car("BMW", "Z8", 0, "черный", 2021, "Германия");
