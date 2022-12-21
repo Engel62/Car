@@ -1,10 +1,10 @@
 package transport;
 
-public class Transport {
+public abstract class Transport {
     private  String brand;
     private  String model;
-    private final   int productionYear;
-    private final   String productionCountry;
+    private   int productionYear;
+    private   String productionCountry;
     private String color;
     private  int maxSpeed;
 
@@ -40,6 +40,9 @@ public class Transport {
             maxSpeed = 120;
         }
         this.maxSpeed = maxSpeed;
+    }
+
+    public Transport(String brand, String model, int productionYear, String productionCountry, String color) {
     }
 
     public String getBrand() {

@@ -8,7 +8,8 @@ public class Car extends Transport {
     private boolean summerTyers;
     private Key key;
 
-    public Car(String brand,
+    public Car(
+            String brand,
                 String model,
         double engineVolume,
         String color,
@@ -20,6 +21,7 @@ public class Car extends Transport {
         int seatsCount,
         boolean summerTyers,
         Key key) {
+        super(brand, model, productionYear,productionCountry, color);
 
 
 
@@ -75,7 +77,7 @@ this.engineVolume = engineVolume;
 
     @Override
     public String toString () {
-        return brand + " " + model + ", объем двигателя " + engineVolume + " л. , цвет " + color + ", год выпуска " + productionYear + ", страна сборки " + productionCountry + ".";
+        return getBrand() + " " + getModel() + ", объем двигателя " + getEngineVolume() + " л. , цвет " + getColor() + ", год выпуска " + getProductionYear() + ", страна сборки " + getProductionCountry() + ".";
     }
 
     public double getEngineVolume() {
@@ -84,14 +86,6 @@ this.engineVolume = engineVolume;
 
     public void setEngineVolume(double engineVolume) {
         this.engineVolume = engineVolume;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public String getGears() {
@@ -118,22 +112,6 @@ this.engineVolume = engineVolume;
 
     public void setSummerTyers(boolean summerTyers) {
         this.summerTyers = summerTyers;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getProductionYear() {
-        return productionYear;
-    }
-
-    public String getProductionCountry() {
-        return productionCountry;
     }
 
     public String getTypeOfBody() {
