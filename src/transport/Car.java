@@ -76,7 +76,7 @@ this.engineVolume = engineVolume;
 
 
     @Override
-    public String toString () {
+    public  String toString () {
         return getBrand() + " " + getModel() + ", объем двигателя " + getEngineVolume() + " л. , цвет " + getColor() + ", год выпуска " + getProductionYear() + ", страна сборки " + getProductionCountry() + ".";
     }
 

@@ -1,21 +1,19 @@
 import transport.Car;
+import transport.Transport;
 
 public class Main {
     public static void main(String[] args) {
-        Car lada = new Car("Lada", "Granta", 1.7, "желтый", 2015, "Россия");
-        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "черный", 2020, "Германия");
-        Car bmw = new Car("BMW", "Z8", 0, "черный", 2021, "Германия");
-        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4, "красный", 2018, "Южная Корея");
-        Car hyundai = new Car("Hyundai", "Avante", 1.6, "оранжевый", 2016, "Южная Корея");
+        Transport lada = new Car("Lada", "Granta", 1.7, "желтый", 2015, "Россия");
+        Transport audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "черный", 2020, "Германия");
+        Transport bmw = new Car("BMW", "Z8", 0, "черный", 2021, "Германия");
+        Transport kia = new Car("Kia", "Sportage 4-го поколения", 2.4, "красный", 2018, "Южная Корея");
+        Transport hyundai = new Car("Hyundai", "Avante", 1.6, "оранжевый", 2016, "Южная Корея");
 
-
-
-
-        printInfo(lada);
-        printInfo(audi);
-        printInfo(bmw);
-        printInfo(kia);
-        printInfo(hyundai);
+        printInfo((Car) lada);
+        printInfo((Car) audi);
+        printInfo((Car) bmw);
+        printInfo((Car) kia);
+        printInfo((Car) hyundai);
     }
 
     private static void printInfo(Car car) {

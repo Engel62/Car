@@ -8,7 +8,7 @@ public abstract class Transport {
     private String color;
     private  int maxSpeed;
 
-    public Transport(String brand, String model,
+    public  Transport(String brand, String model,
                      int productionYear, String productionCountry,
                      String color, int maxSpeed) {
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
@@ -45,7 +45,7 @@ public abstract class Transport {
     public Transport(String brand, String model, int productionYear, String productionCountry, String color) {
     }
 
-    public String getBrand() {
+    public  String getBrand() {
         return brand;
     }
 
