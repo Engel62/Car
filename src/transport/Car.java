@@ -1,11 +1,6 @@
 package transport;
-public class Car {
-    private final String brand;
-    private final String model;
+public class Car extends Transport {
     private double engineVolume;
-    private String color;
-    private final int productionYear;
-    private final String productionCountry;
     private   String gears;
     private final  String typeOfBody;
     private String  regNumber;
@@ -26,29 +21,13 @@ public class Car {
         boolean summerTyers,
         Key key) {
 
-        if (color == null || color.isEmpty()) {
-            color = "Белый";
-        }
-this.color = color;
+
 
         if (engineVolume <= 0 ) {
             engineVolume = 1.5;
         }
 this.engineVolume = engineVolume;
-            if (brand == null || brand.isEmpty()) {
-                brand = "default";
-            }
-            this.brand = brand;
 
-        if (model == null || model.isEmpty() || model.isBlank()) {
-            model = "default";
-        }
-        this.model = model;
-
-        this.productionYear = productionYear;
-        if (productionCountry == null || productionCountry.isEmpty()) {
-            productionCountry = "default";}
-        this.productionCountry = productionCountry;
 
         if (typeOfBody == null || typeOfBody.isEmpty()) {
         typeOfBody = "Седан";
