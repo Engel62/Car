@@ -1,20 +1,29 @@
+import transport.Bus;
 import transport.Car;
-import transport.Transport;
+
 
 public class Main {
     public static void main(String[] args) {
-        Transport lada = new Car("Lada", "Granta", 1.7, "желтый", 2015, "Россия");
-        Transport audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "черный", 2020, "Германия");
-        Transport bmw = new Car("BMW", "Z8", 0, "черный", 2021, "Германия");
-        Transport kia = new Car("Kia", "Sportage 4-го поколения", 2.4, "красный", 2018, "Южная Корея");
-        Transport hyundai = new Car("Hyundai", "Avante", 1.6, "оранжевый", 2016, "Южная Корея");
+        Car lada = new Car("Lada", "Granta", 1.7, "желтый", 2015, "Россия");
+        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "черный", 2020, "Германия");
+        Car bmw = new Car("BMW", "Z8", 0, "черный", 2021, "Германия");
+        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4, "красный", 2018, "Южная Корея");
+        Car hyundai = new Car("Hyundai", "Avante", 1.6, "оранжевый", 2016, "Южная Корея");
 
-        printInfo((Car) lada);
-        printInfo((Car) audi);
-        printInfo((Car) bmw);
-        printInfo((Car) kia);
-        printInfo((Car) hyundai);
+        printInfo(lada);
+        printInfo(audi);
+        printInfo(bmw);
+        printInfo(kia);
+        printInfo(hyundai);
+
+        Bus ikarus = new Bus("Икарус", "Пассажисркий", 1980, "СССР", "Красный", 90);
+        Bus liaz = new Bus("ЛиАЗ-677", "Пассажисркий", 1967, "СССР", "Желтый", 70);
+        Bus gza = new Bus("ГЗА-651 ", "Пассажисркий", 1950, "СССР", "Красный", 60);
+        System.out.println(ikarus);
+        System.out.println(liaz);
+        System.out.println(gza);
     }
+
 
     private static void printInfo(Car car) {
         System.out.println(
